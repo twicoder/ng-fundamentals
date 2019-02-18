@@ -38,5 +38,4 @@ export class EventThumbnailComponent {
         return { green: isEarlyStart, bold: isEarlyStart }
     }
 
-
 }
