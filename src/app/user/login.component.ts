@@ -13,7 +13,6 @@ export class LoginComponent {
     password
     mouseoverLogin
     constructor(private authService:AuthService, private router:Router) {
-
     }
 
     login(formValues) {
