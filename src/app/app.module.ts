@@ -7,6 +7,9 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
+import { CollapsibleWellComponent } from './common/collapsible-well.component';
+
+
 import {
   EventsListComponent,
   EventThumbnailComponent,
@@ -35,7 +38,8 @@ import { AuthService } from './user/auth.service';
     CreateEventComponent,
     Error404Component,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollapsibleWellComponent
   ],
   imports: [
     CommonModule,
