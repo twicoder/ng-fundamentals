@@ -41,4 +41,9 @@ export class AuthService {
         let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
         return this.http.put(`/api/users/${this.currentUser.id}`, this.currentUser, options);
     }
+
+    logout() {
+        //TODO:
+        console.log('todo')
+    }
 }
