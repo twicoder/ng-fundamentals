@@ -29,7 +29,9 @@ import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
 
-import { JQ_TOKEN, SimpleModalComponent } from './common/index';
+import { JQ_TOKEN, 
+  SimpleModalComponent,
+  ModalTriggerDirective } from './common/index';
 let jQuery = window['$'];
 
 
@@ -46,6 +48,7 @@ let jQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
+    ModalTriggerDirective,
     DurationPipe
   ],
   imports: [
