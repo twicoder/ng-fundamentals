@@ -9,6 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   EventsListComponent,
@@ -61,6 +62,7 @@ let jQuery = window['$'];
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     ToastrModule.forRoot(
