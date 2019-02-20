@@ -29,6 +29,10 @@ import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
 
+import { JQ_TOKEN, SimpleModalComponent } from './common/index';
+let jQuery = window['$'];
+
+
 @NgModule({
   declarations: [
     EventsAppComponent,
@@ -41,6 +45,7 @@ import { AuthService } from './user/auth.service';
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
+    SimpleModalComponent,
     DurationPipe
   ],
   imports: [
@@ -60,6 +65,7 @@ import { AuthService } from './user/auth.service';
   ],
   providers: [
     EventService, 
+    { provide: JQ_TOKEN, useValue: jQuery},
     EventListResolver,
     AuthService,
     EventRouteActivator,
