@@ -32,11 +32,11 @@ import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
 
-import { JQ_TOKEN, 
+import { JQ_TOKEN,
   SimpleModalComponent,
   ModalTriggerDirective,
   UpvoteComponent } from './common/index';
-let jQuery = window['$'];
+const jQuery = window['$'];
 
 
 @NgModule({
@@ -74,7 +74,7 @@ let jQuery = window['$'];
     )
   ],
   providers: [
-    EventService, 
+    EventService,
     { provide: JQ_TOKEN, useValue: jQuery},
     EventListResolver,
     AuthService,
@@ -90,8 +90,8 @@ let jQuery = window['$'];
 export class AppModule { }
 
 export function checkDirtyState(component: CreateEventComponent) {
-  if(component.isDirty) {
-    return window.confirm('You have not saved this event, do you really want to cancel?')
+  if (component.isDirty) {
+    return window.confirm('You have not saved this event, do you really want to cancel?');
   }
-  return true
+  return true;
 }

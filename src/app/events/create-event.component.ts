@@ -1,6 +1,6 @@
-import { Component } from '@angular/core'
-import { Router } from '@angular/router'
-import { EventService } from './shared/index'
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EventService } from './shared/index';
 
 @Component({
     templateUrl: './create-event.component.html',
@@ -12,10 +12,10 @@ import { EventService } from './shared/index'
     .error :ms-input-placeholder { color: #999; }
     `]
 })
-export class CreateEventComponent {
-    isDirty: boolean = true
-    event: any
-    
+export class CreateEventComponent implements OnInit{
+    isDirty = true;
+    event: any;
+
     constructor(private router: Router, private eventService: EventService) {
     }
 
@@ -32,17 +32,17 @@ export class CreateEventComponent {
             },
             onlineUrl: 'http://ngSpectacular.com',
             imageUrl: 'http://ngSpectacular.com/logo.png',
-        }
+        };
     }
 
     cancel() {
-        this.router.navigate(['/events'])
+        this.router.navigate(['/events']);
     }
 
     saveEvent(formValues) {
         this.eventService.saveEvent(formValues).subscribe(()=>{
-            this.isDirty = false
-            this.router.navigate(['/events'])
+            this.isDirty = false;
+            this.router.navigate(['/events']);
         });
     }
 
